@@ -14,7 +14,6 @@ Pod::Spec.new do |s|
 
   s.subspec 'View' do |ss|
     ss.dependency 'KLCPopup'
-    ss.public_header_files = "View/SAShareBaseActivity.h", "View/SAShareBaseActivity.h"
     ss.source_files = "View/*.{h,m}"
     ss.resources = "View/*.xib"
   end
