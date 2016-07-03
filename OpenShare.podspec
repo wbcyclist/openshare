@@ -14,13 +14,13 @@ Pod::Spec.new do |s|
 
   s.subspec 'Core' do |ss|
     ss.source_files = "OpenShare/*.{h,m}"
-    ss.public_header_files = 'OpenShare/OpenShareHeader.h'
+    ss.public_header_files = 'OpenShare/*.h'
   end
 
   s.subspec 'PopupView' do |ss|
     ss.dependency 'OpenShare/Core'
     ss.source_files = "View/*.{h,m}"
     ss.resources = "View/*.xib"
-    ss.public_header_files = 'View/KXShareViewHeader.h'
+    ss.public_header_files = 'View/*.h'
   end
 end
