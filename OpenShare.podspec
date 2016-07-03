@@ -10,12 +10,17 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.source       = { :git => "https://github.com/wbcyclist/openshare.git", :tag => s.version, :submodules => true }
   
-  s.public_header_files = 'OpenShare/OpenShareHeader.h'
-  s.source_files = "OpenShare/*.{h,m}"
+  s.default_subspec = 'Core'
+
+  s.subspec 'Core' do |core|
+    core.public_header_files = 'OpenShare/OpenShareHeader.h'
+    core.source_files = "OpenShare/*.{h,m}"
+  end
 
   s.subspec 'PopupView' do |popup|
     popup.public_header_files = 'View/KXShareViewHeader.h'
     popup.source_files = "View/*.{h,m}"
     popup.resources = "View/*.xib"
+    popup.dependency 'OpenShare/Core'
   end
 end
