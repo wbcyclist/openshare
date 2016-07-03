@@ -1,5 +1,5 @@
 //
-//  SAShareViewCell.h
+//  KXShareViewCell.h
 //  OpenShareDemo
 //
 //  Created by JasioWoo on 15/7/28.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SAShareViewCell : UICollectionViewCell
+@interface KXShareViewCell : UICollectionViewCell
 
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, strong) UIImage *thumbImage;

@@ -9,6 +9,10 @@
 #import "AppDelegate.h"
 #import "OpenShareHeader.h"
 
+
+static NSString * const kShareQQAppId = @"1104754798";
+static NSString * const kShareWXAppId = @"wxd930ea5d5a258f4f";
+
 @interface AppDelegate ()
 
 @end
@@ -17,7 +21,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    // 注册社交分享 appId/appKey
+    [OpenShare connectQQWithAppId:kShareQQAppId];
+    [OpenShare connectWeixinWithAppId:kShareWXAppId];
+    [OpenShare connectWeiboWithAppKey:@"402180334"];
+    
+    
     return YES;
 }
 

@@ -1,14 +1,14 @@
 //
-//  SAShareViewCell.m
+//  KXShareViewCell.m
 //  OpenShareDemo
 //
 //  Created by JasioWoo on 15/7/28.
 //  Copyright (c) 2015年 JasioWoo. All rights reserved.
 //
 
-#import "SAShareViewCell.h"
+#import "KXShareViewCell.h"
 
-@interface SAShareViewCell ()
+@interface KXShareViewCell ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLab;
@@ -17,7 +17,7 @@
 
 @end
 
-@implementation SAShareViewCell
+@implementation KXShareViewCell
 
 - (void)awakeFromNib {
     // Initialization code

@@ -1,5 +1,5 @@
 //
-//  SAShareBaseActivity.h
+//  KXShareBaseActivity.h
 //  OpenShareDemo
 //
 //  Created by JasioWoo on 15/7/28.
@@ -8,19 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@class SAShareBaseActivity;
+@class KXShareBaseActivity;
 
-typedef void (^SAShareActivityActionHandler)(int tag);
+typedef void (^KXShareActivityActionHandler)(int tag);
 
-@interface SAShareBaseActivity : NSObject
+@interface KXShareBaseActivity : NSObject
 
 @property (nonatomic, assign) int tag;
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, strong) UIImage *thumbImage;
 @property (nonatomic, copy) NSDictionary *userInfo;
-@property (nonatomic, copy) SAShareActivityActionHandler actionHandler;
+@property (nonatomic, copy) KXShareActivityActionHandler actionHandler;
 
-- (instancetype)initWithActionHandler:(SAShareActivityActionHandler)block;
+- (instancetype)initWithActionHandler:(KXShareActivityActionHandler)block;
 
 - (void)performActivity;
 

@@ -1,5 +1,5 @@
 //
-//  SAShareViewFlowLayout.h
+//  KXShareViewFlowLayout.h
 //  OpenShareDemo
 //
 //  Created by JasioWoo on 15/7/28.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SAShareViewFlowLayout : UICollectionViewFlowLayout
+@interface KXShareViewFlowLayout : UICollectionViewFlowLayout
 
 @property (nonatomic, assign) CGSize itemSize;
 @property (nonatomic, assign) CGFloat itemGapH;

@@ -1,14 +1,14 @@
 //
-//  SAShareViewFlowLayout.m
+//  KXShareViewFlowLayout.m
 //  OpenShareDemo
 //
 //  Created by JasioWoo on 15/7/28.
 //  Copyright (c) 2015年 JasioWoo. All rights reserved.
 //
 
-#import "SAShareViewFlowLayout.h"
+#import "KXShareViewFlowLayout.h"
 
-@implementation SAShareViewFlowLayout {
+@implementation KXShareViewFlowLayout {
     NSInteger _cellCount;
     CGSize _boundsSize;
 }

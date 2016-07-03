@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A508C1591D28C0F100AAF1A5 /* KLCPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = A508C1581D28C0F100AAF1A5 /* KLCPopupView.m */; };
 		A55DD19A1B68041C00BD9624 /* OpenShare+QQ.m in Sources */ = {isa = PBXBuildFile; fileRef = A55DD1841B68041C00BD9624 /* OpenShare+QQ.m */; };
 		A55DD19E1B68041C00BD9624 /* OpenShare.m in Sources */ = {isa = PBXBuildFile; fileRef = A55DD18C1B68041C00BD9624 /* OpenShare.m */; };
-		A55DD19F1B68041C00BD9624 /* SAShareBaseActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = A55DD1901B68041C00BD9624 /* SAShareBaseActivity.m */; };
-		A55DD1A01B68041C00BD9624 /* SAShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = A55DD1921B68041C00BD9624 /* SAShareView.m */; };
-		A55DD1A11B68041C00BD9624 /* SAShareView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55DD1931B68041C00BD9624 /* SAShareView.xib */; };
-		A55DD1A21B68041C00BD9624 /* SAShareViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A55DD1951B68041C00BD9624 /* SAShareViewCell.m */; };
-		A55DD1A31B68041C00BD9624 /* SAShareViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55DD1961B68041C00BD9624 /* SAShareViewCell.xib */; };
-		A55DD1A41B68041C00BD9624 /* SAShareViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A55DD1981B68041C00BD9624 /* SAShareViewFlowLayout.m */; };
+		A55DD19F1B68041C00BD9624 /* KXShareBaseActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = A55DD1901B68041C00BD9624 /* KXShareBaseActivity.m */; };
+		A55DD1A01B68041C00BD9624 /* KXShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = A55DD1921B68041C00BD9624 /* KXShareView.m */; };
+		A55DD1A11B68041C00BD9624 /* KXShareView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55DD1931B68041C00BD9624 /* KXShareView.xib */; };
+		A55DD1A21B68041C00BD9624 /* KXShareViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A55DD1951B68041C00BD9624 /* KXShareViewCell.m */; };
+		A55DD1A31B68041C00BD9624 /* KXShareViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55DD1961B68041C00BD9624 /* KXShareViewCell.xib */; };
+		A55DD1A41B68041C00BD9624 /* KXShareViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A55DD1981B68041C00BD9624 /* KXShareViewFlowLayout.m */; };
 		A55DD1AD1B6807A800BD9624 /* OpenShare+Alipay.m in Sources */ = {isa = PBXBuildFile; fileRef = A55DD1A61B6807A800BD9624 /* OpenShare+Alipay.m */; };
 		A55DD1AE1B6807A800BD9624 /* OpenShare+Renren.m in Sources */ = {isa = PBXBuildFile; fileRef = A55DD1A81B6807A800BD9624 /* OpenShare+Renren.m */; };
 		A55DD1AF1B6807A800BD9624 /* OpenShare+Weibo.m in Sources */ = {isa = PBXBuildFile; fileRef = A55DD1AA1B6807A800BD9624 /* OpenShare+Weibo.m */; };
@@ -25,38 +26,27 @@
 		A56477EE1B660DBF00AFE818 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A56477EC1B660DBF00AFE818 /* Main.storyboard */; };
 		A56477F01B660DBF00AFE818 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A56477EF1B660DBF00AFE818 /* Images.xcassets */; };
 		A56477F31B660DBF00AFE818 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A56477F11B660DBF00AFE818 /* LaunchScreen.xib */; };
-		A56477FF1B660DBF00AFE818 /* OpenShareDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A56477FE1B660DBF00AFE818 /* OpenShareDemoTests.m */; };
-		E3D30BD1C8546D03597F12F7 /* libPods-OpenShareDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A45FF9B082F4FE31A5C9FCD3 /* libPods-OpenShareDemo.a */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		A56477F91B660DBF00AFE818 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A56477D71B660DBF00AFE818 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A56477DE1B660DBF00AFE818;
-			remoteInfo = OpenShareDemo;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		49432CE843028CBF944D3224 /* Pods-OpenShareDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenShareDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OpenShareDemo/Pods-OpenShareDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		A45FF9B082F4FE31A5C9FCD3 /* libPods-OpenShareDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OpenShareDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A508C1571D28C0F100AAF1A5 /* KLCPopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLCPopupView.h; sourceTree = "<group>"; };
+		A508C1581D28C0F100AAF1A5 /* KLCPopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLCPopupView.m; sourceTree = "<group>"; };
+		A508C15A1D29005C00AAF1A5 /* KXShareViewHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KXShareViewHeader.h; sourceTree = "<group>"; };
 		A55DD1831B68041C00BD9624 /* OpenShare+QQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OpenShare+QQ.h"; sourceTree = "<group>"; };
 		A55DD1841B68041C00BD9624 /* OpenShare+QQ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OpenShare+QQ.m"; sourceTree = "<group>"; };
 		A55DD18B1B68041C00BD9624 /* OpenShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenShare.h; sourceTree = "<group>"; };
 		A55DD18C1B68041C00BD9624 /* OpenShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenShare.m; sourceTree = "<group>"; };
 		A55DD18D1B68041C00BD9624 /* OpenShareHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenShareHeader.h; sourceTree = "<group>"; };
-		A55DD18F1B68041C00BD9624 /* SAShareBaseActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAShareBaseActivity.h; sourceTree = "<group>"; };
-		A55DD1901B68041C00BD9624 /* SAShareBaseActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAShareBaseActivity.m; sourceTree = "<group>"; };
-		A55DD1911B68041C00BD9624 /* SAShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAShareView.h; sourceTree = "<group>"; };
-		A55DD1921B68041C00BD9624 /* SAShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAShareView.m; sourceTree = "<group>"; };
-		A55DD1931B68041C00BD9624 /* SAShareView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SAShareView.xib; sourceTree = "<group>"; };
-		A55DD1941B68041C00BD9624 /* SAShareViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAShareViewCell.h; sourceTree = "<group>"; };
-		A55DD1951B68041C00BD9624 /* SAShareViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAShareViewCell.m; sourceTree = "<group>"; };
-		A55DD1961B68041C00BD9624 /* SAShareViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SAShareViewCell.xib; sourceTree = "<group>"; };
-		A55DD1971B68041C00BD9624 /* SAShareViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAShareViewFlowLayout.h; sourceTree = "<group>"; };
-		A55DD1981B68041C00BD9624 /* SAShareViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAShareViewFlowLayout.m; sourceTree = "<group>"; };
+		A55DD18F1B68041C00BD9624 /* KXShareBaseActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KXShareBaseActivity.h; sourceTree = "<group>"; };
+		A55DD1901B68041C00BD9624 /* KXShareBaseActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KXShareBaseActivity.m; sourceTree = "<group>"; };
+		A55DD1911B68041C00BD9624 /* KXShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KXShareView.h; sourceTree = "<group>"; };
+		A55DD1921B68041C00BD9624 /* KXShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KXShareView.m; sourceTree = "<group>"; };
+		A55DD1931B68041C00BD9624 /* KXShareView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KXShareView.xib; sourceTree = "<group>"; };
+		A55DD1941B68041C00BD9624 /* KXShareViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KXShareViewCell.h; sourceTree = "<group>"; };
+		A55DD1951B68041C00BD9624 /* KXShareViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KXShareViewCell.m; sourceTree = "<group>"; };
+		A55DD1961B68041C00BD9624 /* KXShareViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KXShareViewCell.xib; sourceTree = "<group>"; };
+		A55DD1971B68041C00BD9624 /* KXShareViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KXShareViewFlowLayout.h; sourceTree = "<group>"; };
+		A55DD1981B68041C00BD9624 /* KXShareViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KXShareViewFlowLayout.m; sourceTree = "<group>"; };
 		A55DD1A51B6807A800BD9624 /* OpenShare+Alipay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OpenShare+Alipay.h"; sourceTree = "<group>"; };
 		A55DD1A61B6807A800BD9624 /* OpenShare+Alipay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OpenShare+Alipay.m"; sourceTree = "<group>"; };
 		A55DD1A71B6807A800BD9624 /* OpenShare+Renren.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OpenShare+Renren.h"; sourceTree = "<group>"; };
@@ -75,22 +65,10 @@
 		A56477ED1B660DBF00AFE818 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A56477EF1B660DBF00AFE818 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A56477F21B660DBF00AFE818 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		A56477F81B660DBF00AFE818 /* OpenShareDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenShareDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A56477FD1B660DBF00AFE818 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A56477FE1B660DBF00AFE818 /* OpenShareDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenShareDemoTests.m; sourceTree = "<group>"; };
-		DB3A986E1B7C454F8797DD01 /* Pods-OpenShareDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenShareDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-OpenShareDemo/Pods-OpenShareDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A56477DC1B660DBF00AFE818 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E3D30BD1C8546D03597F12F7 /* libPods-OpenShareDemo.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A56477F51B660DBF00AFE818 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -100,12 +78,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0FA669362541D8CD807B00E2 /* Frameworks */ = {
+		A508C1551D28C0F100AAF1A5 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
-				A45FF9B082F4FE31A5C9FCD3 /* libPods-OpenShareDemo.a */,
+				A508C1561D28C0F100AAF1A5 /* KLCPopup */,
 			);
-			name = Frameworks;
+			path = Vendors;
+			sourceTree = "<group>";
+		};
+		A508C1561D28C0F100AAF1A5 /* KLCPopup */ = {
+			isa = PBXGroup;
+			children = (
+				A508C1571D28C0F100AAF1A5 /* KLCPopupView.h */,
+				A508C1581D28C0F100AAF1A5 /* KLCPopupView.m */,
+			);
+			path = KLCPopup;
 			sourceTree = "<group>";
 		};
 		A55DD1801B68041C00BD9624 /* OpenShare */ = {
@@ -131,16 +118,17 @@
 		A55DD18E1B68041C00BD9624 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A55DD18F1B68041C00BD9624 /* SAShareBaseActivity.h */,
-				A55DD1901B68041C00BD9624 /* SAShareBaseActivity.m */,
-				A55DD1911B68041C00BD9624 /* SAShareView.h */,
-				A55DD1921B68041C00BD9624 /* SAShareView.m */,
-				A55DD1931B68041C00BD9624 /* SAShareView.xib */,
-				A55DD1941B68041C00BD9624 /* SAShareViewCell.h */,
-				A55DD1951B68041C00BD9624 /* SAShareViewCell.m */,
-				A55DD1961B68041C00BD9624 /* SAShareViewCell.xib */,
-				A55DD1971B68041C00BD9624 /* SAShareViewFlowLayout.h */,
-				A55DD1981B68041C00BD9624 /* SAShareViewFlowLayout.m */,
+				A508C15A1D29005C00AAF1A5 /* KXShareViewHeader.h */,
+				A55DD18F1B68041C00BD9624 /* KXShareBaseActivity.h */,
+				A55DD1901B68041C00BD9624 /* KXShareBaseActivity.m */,
+				A55DD1911B68041C00BD9624 /* KXShareView.h */,
+				A55DD1921B68041C00BD9624 /* KXShareView.m */,
+				A55DD1931B68041C00BD9624 /* KXShareView.xib */,
+				A55DD1941B68041C00BD9624 /* KXShareViewCell.h */,
+				A55DD1951B68041C00BD9624 /* KXShareViewCell.m */,
+				A55DD1961B68041C00BD9624 /* KXShareViewCell.xib */,
+				A55DD1971B68041C00BD9624 /* KXShareViewFlowLayout.h */,
+				A55DD1981B68041C00BD9624 /* KXShareViewFlowLayout.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -151,10 +139,8 @@
 				A55DD1801B68041C00BD9624 /* OpenShare */,
 				A55DD18E1B68041C00BD9624 /* View */,
 				A56477E11B660DBF00AFE818 /* OpenShareDemo */,
-				A56477FB1B660DBF00AFE818 /* OpenShareDemoTests */,
 				A56477E01B660DBF00AFE818 /* Products */,
-				DFC4AFE0F3514A4892304F94 /* Pods */,
-				0FA669362541D8CD807B00E2 /* Frameworks */,
+				F31E2ECC8022D60B7B117FE9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -162,7 +148,6 @@
 			isa = PBXGroup;
 			children = (
 				A56477DF1B660DBF00AFE818 /* OpenShareDemo.app */,
-				A56477F81B660DBF00AFE818 /* OpenShareDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -177,6 +162,7 @@
 				A56477EC1B660DBF00AFE818 /* Main.storyboard */,
 				A56477EF1B660DBF00AFE818 /* Images.xcassets */,
 				A56477F11B660DBF00AFE818 /* LaunchScreen.xib */,
+				A508C1551D28C0F100AAF1A5 /* Vendors */,
 				A56477E21B660DBF00AFE818 /* Supporting Files */,
 			);
 			path = OpenShareDemo;
@@ -191,30 +177,11 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		A56477FB1B660DBF00AFE818 /* OpenShareDemoTests */ = {
+		F31E2ECC8022D60B7B117FE9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A56477FE1B660DBF00AFE818 /* OpenShareDemoTests.m */,
-				A56477FC1B660DBF00AFE818 /* Supporting Files */,
 			);
-			path = OpenShareDemoTests;
-			sourceTree = "<group>";
-		};
-		A56477FC1B660DBF00AFE818 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				A56477FD1B660DBF00AFE818 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		DFC4AFE0F3514A4892304F94 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				49432CE843028CBF944D3224 /* Pods-OpenShareDemo.debug.xcconfig */,
-				DB3A986E1B7C454F8797DD01 /* Pods-OpenShareDemo.release.xcconfig */,
-			);
-			name = Pods;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,11 +191,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A56478021B660DBF00AFE818 /* Build configuration list for PBXNativeTarget "OpenShareDemo" */;
 			buildPhases = (
-				A423D52E40F0A06BBC963FEB /* Check Pods Manifest.lock */,
 				A56477DB1B660DBF00AFE818 /* Sources */,
 				A56477DC1B660DBF00AFE818 /* Frameworks */,
 				A56477DD1B660DBF00AFE818 /* Resources */,
-				DB893F038258C90033BB8E2D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -239,39 +204,17 @@
 			productReference = A56477DF1B660DBF00AFE818 /* OpenShareDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A56477F71B660DBF00AFE818 /* OpenShareDemoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A56478051B660DBF00AFE818 /* Build configuration list for PBXNativeTarget "OpenShareDemoTests" */;
-			buildPhases = (
-				A56477F41B660DBF00AFE818 /* Sources */,
-				A56477F51B660DBF00AFE818 /* Frameworks */,
-				A56477F61B660DBF00AFE818 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A56477FA1B660DBF00AFE818 /* PBXTargetDependency */,
-			);
-			name = OpenShareDemoTests;
-			productName = OpenShareDemoTests;
-			productReference = A56477F81B660DBF00AFE818 /* OpenShareDemoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		A56477D71B660DBF00AFE818 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = JasioWoo;
 				TargetAttributes = {
 					A56477DE1B660DBF00AFE818 = {
 						CreatedOnToolsVersion = 6.4;
-					};
-					A56477F71B660DBF00AFE818 = {
-						CreatedOnToolsVersion = 6.4;
-						TestTargetID = A56477DE1B660DBF00AFE818;
 					};
 				};
 			};
@@ -289,7 +232,6 @@
 			projectRoot = "";
 			targets = (
 				A56477DE1B660DBF00AFE818 /* OpenShareDemo */,
-				A56477F71B660DBF00AFE818 /* OpenShareDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -301,92 +243,37 @@
 			files = (
 				A56477EE1B660DBF00AFE818 /* Main.storyboard in Resources */,
 				A56477F31B660DBF00AFE818 /* LaunchScreen.xib in Resources */,
-				A55DD1A11B68041C00BD9624 /* SAShareView.xib in Resources */,
-				A55DD1A31B68041C00BD9624 /* SAShareViewCell.xib in Resources */,
+				A55DD1A11B68041C00BD9624 /* KXShareView.xib in Resources */,
+				A55DD1A31B68041C00BD9624 /* KXShareViewCell.xib in Resources */,
 				A56477F01B660DBF00AFE818 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A56477F61B660DBF00AFE818 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		A423D52E40F0A06BBC963FEB /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		DB893F038258C90033BB8E2D /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OpenShareDemo/Pods-OpenShareDemo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A56477DB1B660DBF00AFE818 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A508C1591D28C0F100AAF1A5 /* KLCPopupView.m in Sources */,
 				A55DD1AE1B6807A800BD9624 /* OpenShare+Renren.m in Sources */,
 				A56477EB1B660DBF00AFE818 /* ViewController.m in Sources */,
-				A55DD19F1B68041C00BD9624 /* SAShareBaseActivity.m in Sources */,
-				A55DD1A41B68041C00BD9624 /* SAShareViewFlowLayout.m in Sources */,
+				A55DD19F1B68041C00BD9624 /* KXShareBaseActivity.m in Sources */,
+				A55DD1A41B68041C00BD9624 /* KXShareViewFlowLayout.m in Sources */,
 				A55DD19A1B68041C00BD9624 /* OpenShare+QQ.m in Sources */,
 				A55DD19E1B68041C00BD9624 /* OpenShare.m in Sources */,
 				A55DD1B01B6807A800BD9624 /* OpenShare+Weixin.m in Sources */,
-				A55DD1A01B68041C00BD9624 /* SAShareView.m in Sources */,
+				A55DD1A01B68041C00BD9624 /* KXShareView.m in Sources */,
 				A56477E81B660DBF00AFE818 /* AppDelegate.m in Sources */,
 				A55DD1AD1B6807A800BD9624 /* OpenShare+Alipay.m in Sources */,
 				A56477E51B660DBF00AFE818 /* main.m in Sources */,
 				A55DD1AF1B6807A800BD9624 /* OpenShare+Weibo.m in Sources */,
-				A55DD1A21B68041C00BD9624 /* SAShareViewCell.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A56477F41B660DBF00AFE818 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A56477FF1B660DBF00AFE818 /* OpenShareDemoTests.m in Sources */,
+				A55DD1A21B68041C00BD9624 /* KXShareViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		A56477FA1B660DBF00AFE818 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A56477DE1B660DBF00AFE818 /* OpenShareDemo */;
-			targetProxy = A56477F91B660DBF00AFE818 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A56477EC1B660DBF00AFE818 /* Main.storyboard */ = {
@@ -492,59 +379,25 @@
 		};
 		A56478031B660DBF00AFE818 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 49432CE843028CBF944D3224 /* Pods-OpenShareDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = OpenShareDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jasio.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		A56478041B660DBF00AFE818 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DB3A986E1B7C454F8797DD01 /* Pods-OpenShareDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = OpenShareDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jasio.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		A56478061B660DBF00AFE818 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = OpenShareDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenShareDemo.app/OpenShareDemo";
-			};
-			name = Debug;
-		};
-		A56478071B660DBF00AFE818 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = OpenShareDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenShareDemo.app/OpenShareDemo";
 			};
 			name = Release;
 		};
@@ -565,15 +418,6 @@
 			buildConfigurations = (
 				A56478031B660DBF00AFE818 /* Debug */,
 				A56478041B660DBF00AFE818 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A56478051B660DBF00AFE818 /* Build configuration list for PBXNativeTarget "OpenShareDemoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A56478061B660DBF00AFE818 /* Debug */,
-				A56478071B660DBF00AFE818 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
