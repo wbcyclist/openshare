@@ -8,9 +8,9 @@ Pod::Spec.new do |s|
   s.platform     = :ios 
   s.ios.deployment_target = 7.0
   s.requires_arc = true
-  s.source       = { :git => "https://github.com/wbcyclist/openshare.git", :tag => s.version, :submodules => true }
+  s.source       = { :git => "https://github.com/wbcyclist/openshare.git", :tag => s.version}
   
-  s.default_subspec = 'Core'
+  s.default_subspec = 'Core', 'PopupView'
 
   s.subspec 'Core' do |ss|
     ss.source_files = "OpenShare/*.{h,m}"
