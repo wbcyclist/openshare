@@ -26,7 +26,7 @@
 @implementation KXShareView
 
 + (instancetype)newFromNibWithHeight:(CGFloat)height {
-    KXShareView *view = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil] firstObject];
+    KXShareView *view = [[[NSBundle bundleForClass:[self class]] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil] firstObject];
     view.backgroundColor = [UIColor whiteColor];
     view.bottomView.hidden = YES;
     view.bottomHeightLC.constant = 0.0;
@@ -70,13 +70,13 @@
         }
         flowLayout.itemGapV = 10.f;
         flowLayout.itemSize = [self getCellSize];
-        UINib *cellNib = [UINib nibWithNibName:NSStringFromClass([KXShareViewCell class]) bundle:[NSBundle mainBundle]];
+        UINib *cellNib = [UINib nibWithNibName:NSStringFromClass([KXShareViewCell class]) bundle:[NSBundle bundleForClass:[self class]]];
         [_collectionView registerNib:cellNib forCellWithReuseIdentifier:NSStringFromClass([KXShareViewCell class])];
     }
 }
 
 - (CGSize)getCellSize {
-    KXShareViewCell *cellView = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([KXShareViewCell class]) owner:nil options:nil] firstObject];
+    KXShareViewCell *cellView = [[[NSBundle bundleForClass:[self class]] loadNibNamed:NSStringFromClass([KXShareViewCell class]) owner:nil options:nil] firstObject];
     return cellView.frame.size;
 }
 
