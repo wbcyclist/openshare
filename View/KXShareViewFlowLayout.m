@@ -9,132 +9,145 @@
 #import "KXShareViewFlowLayout.h"
 
 @implementation KXShareViewFlowLayout {
-    NSInteger _cellCount;
+    // 页面大小
     CGSize _boundsSize;
+    // 总共有多少item
+    NSInteger _itemCount;
+    // 一行共多少item
+    u_int _rowItemCount;
+    // 一列共多少item
+    u_int _columnItemCount;
+    // 当前共多少页
+    u_int _pageCount;
+    
+    CGFloat _itemGapH;
+    CGFloat _itemGapV;
 }
-
 @synthesize itemSize = _itemSize;
 
-- (void)prepareLayout
-{
+- (void)prepareLayout {
     // Get the number of cells and the bounds size
     if (_itemSize.width==0) {
         _itemSize = CGSizeMake(100, 100);
     }
-    _cellCount = [self.collectionView numberOfItemsInSection:0];
+    _itemCount = [self.collectionView numberOfItemsInSection:0];
     _boundsSize = self.collectionView.bounds.size;
 }
 
-- (CGSize)collectionViewContentSize
-{
+- (CGSize)collectionViewContentSize {
     // We should return the content size. Lets do some math:
     
-    NSInteger verticalItemsCount = (NSInteger)floorf((_boundsSize.height+_itemGapV)/(_itemSize.height+_itemGapV));
-    NSInteger horizontalItemsCount = (NSInteger)floorf((_boundsSize.width+_itemGapH)/(_itemSize.width+_itemGapH));
+    u_int horizontalItemsCount = MAX(1, floorf( (_boundsSize.width+_itemMinGapH) / (_itemSize.width+_itemMinGapH) ));
+    u_int verticalItemsCount = MAX(1, floorf( (_boundsSize.height+_itemMinGapV) / (_itemSize.height+_itemMinGapV) ));
     
-    NSInteger itemsPerPage = verticalItemsCount * horizontalItemsCount;
-    NSInteger numberOfItems = _cellCount;
-    NSInteger numberOfPages = (NSInteger)ceilf((CGFloat)numberOfItems / (CGFloat)itemsPerPage);
+    if (_maxRowItemCount > 0 && _maxRowItemCount < horizontalItemsCount) {
+        horizontalItemsCount = _maxRowItemCount;
+    }
+    if (_maxColumnItemCount > 0 && _maxColumnItemCount < verticalItemsCount) {
+        verticalItemsCount = _maxColumnItemCount;
+    }
+    if (_itemCount < horizontalItemsCount) {
+        horizontalItemsCount = MAX(1, _itemCount);
+    }
     
-    CGSize size = _boundsSize;
-    size.width = numberOfPages * _boundsSize.width;
+    u_int vCount = ceilf(_itemCount / (CGFloat)horizontalItemsCount);
+    if (vCount < verticalItemsCount) {
+        verticalItemsCount = MAX(1, vCount);
+    }
+    
+    _rowItemCount = horizontalItemsCount;
+    _columnItemCount = verticalItemsCount;
+    _pageCount = ceilf(_itemCount / (CGFloat)(_rowItemCount*_columnItemCount));
+    
+    _itemGapH = (_boundsSize.width - (_rowItemCount * _itemSize.width)) / (_rowItemCount+1);
+    _itemGapV = (_boundsSize.height - (_columnItemCount * _itemSize.height)) / (_columnItemCount+1);
+    
+    CGSize size = CGSizeMake(_pageCount * _boundsSize.width, _boundsSize.height);
     return size;
 }
 
-- (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect
-{
+- (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect {
     // This method requires to return the attributes of those cells that intsersect with the given rect.
     // In this implementation we just return all the attributes.
     // In a better implementation we could compute only those attributes that intersect with the given rect.
     
-    NSMutableArray *allAttributes = [NSMutableArray arrayWithCapacity:_cellCount];
+    NSMutableArray *allAttributes = [NSMutableArray arrayWithCapacity:_itemCount];
     
-    for (NSUInteger i=0; i<_cellCount; ++i)
-    {
+    for (NSUInteger i=0; i<_itemCount; i++) {
         NSIndexPath *indexPath = [NSIndexPath indexPathForRow:i inSection:0];
         UICollectionViewLayoutAttributes *attr = [self _layoutForAttributesForCellAtIndexPath:indexPath];
-        
         [allAttributes addObject:attr];
     }
     
     return allAttributes;
 }
 
-- (UICollectionViewLayoutAttributes*)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UICollectionViewLayoutAttributes*)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath {
     return [self _layoutForAttributesForCellAtIndexPath:indexPath];
 }
 
-- (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds
-{
+- (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds {
     // We should do some math here, but we are lazy.
     return YES;
 }
 
-- (UICollectionViewLayoutAttributes*)_layoutForAttributesForCellAtIndexPath:(NSIndexPath*)indexPath
-{
+- (UICollectionViewLayoutAttributes*)_layoutForAttributesForCellAtIndexPath:(NSIndexPath*)indexPath {
     // Here we have the magic of the layout.
-    
     NSInteger row = indexPath.row;
     
-    CGRect bounds = self.collectionView.bounds;
-    CGSize itemSize = self.itemSize;
+    NSInteger itemPage = floorf(row/(_rowItemCount*_columnItemCount)); // 第几页
+    NSInteger rowPosition = (row/_rowItemCount)%_columnItemCount; // 第几行
+    NSInteger columnPosition = row%_rowItemCount; // 第几列
     
-    // Get some info:
-    //    NSInteger verticalItemsCount = (NSInteger)floorf(bounds.size.height / itemSize.height);
-    //    NSInteger horizontalItemsCount = (NSInteger)floorf(bounds.size.width / itemSize.width);
-    NSInteger verticalItemsCount = (NSInteger)floorf((bounds.size.height+_itemGapV)/(_itemSize.height+_itemGapV));
-    NSInteger horizontalItemsCount = (NSInteger)floorf((bounds.size.width+_itemGapH)/(_itemSize.width+_itemGapH));
-    NSInteger itemsPerPage = verticalItemsCount * horizontalItemsCount;
-    NSInteger itemPage = floorf(row/itemsPerPage);//第几页
+    CGFloat x = (columnPosition+1)*_itemGapH + columnPosition*_itemSize.width + itemPage*_boundsSize.width;
+    CGFloat y = (rowPosition+1)*_itemGapV + rowPosition*_itemSize.height;
     
-    // Compute the column & row position, as well as the page of the cell.
-    NSInteger columnPosition = row%horizontalItemsCount;
-    NSInteger rowPosition = (row/horizontalItemsCount)%verticalItemsCount;
-    
-    CGFloat centerX = bounds.size.width/2 + bounds.size.width*itemPage;
-    NSInteger centerN;
-    if (horizontalItemsCount > _cellCount) {
-        centerN = _cellCount/2;
-    } else {
-        centerN = horizontalItemsCount/2;
-    }
-    NSInteger n = columnPosition;
-    
-    CGPoint position;
-    position.x = centerX + (n - centerN)*(_itemSize.width+_itemGapH) - _itemSize.width/2;
-    if (horizontalItemsCount > _cellCount) {
-        position.y = (bounds.size.height - itemSize.height)/2;
-    } else {
-        position.y = rowPosition * (itemSize.height + _itemGapV) + self.topOffset;
-    }
-    
-    
-    BOOL isEvenNum = horizontalItemsCount > _cellCount ? _cellCount%2==0 : horizontalItemsCount%2==0;
-    if (isEvenNum) {
-        position.x += (_itemSize.width+_itemGapH)/2;
-    }
+//    NSLog(@"row=%@, x=%@, y=%@", @(row), @(x), @(y));
+    CGPoint position = CGPointMake(x, y);
     
     // Creating an empty attribute
     UICollectionViewLayoutAttributes *attr = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
-    
-    CGRect frame = CGRectZero;
-    // And finally, we assign the positions of the cells
-    //    frame.origin.x = itemPage * bounds.size.width + columnPosition * itemSize.width;
-    //    frame.origin.y = rowPosition * itemSize.height;
-    frame.origin = position;
-    frame.size = _itemSize;
-    
+    CGRect frame = (CGRect){.origin = position, .size = _itemSize};
     attr.frame = frame;
     return attr;
 }
 
 #pragma mark Properties
-
-- (void)setItemSize:(CGSize)itemSize
-{
+- (void)setItemSize:(CGSize)itemSize {
+    if (CGSizeEqualToSize(itemSize, _itemSize)) {
+        return;
+    }
     _itemSize = itemSize;
     [self invalidateLayout];
 }
+- (void)setItemMinGapH:(CGFloat)itemMinGapH {
+    _itemMinGapH = itemMinGapH;
+    if (_itemMinGapH > _itemGapH) {
+        [self invalidateLayout];
+    }
+}
+- (void)setItemMinGapV:(CGFloat)itemMinGapV {
+    _itemMinGapV = itemMinGapV;
+    if (_itemMinGapV > _itemGapV) {
+        [self invalidateLayout];
+    }
+}
+- (void)setMaxRowItemCount:(u_int)maxRowItemCount {
+    if (_maxRowItemCount != maxRowItemCount) {
+        _maxRowItemCount = maxRowItemCount;
+        [self invalidateLayout];
+    }
+}
+- (void)setMaxColumnItemCount:(u_int)maxColumnItemCount {
+    if (_maxColumnItemCount != maxColumnItemCount) {
+        _maxColumnItemCount = maxColumnItemCount;
+        [self invalidateLayout];
+    }
+}
+
+
+
+
+
 
 @end

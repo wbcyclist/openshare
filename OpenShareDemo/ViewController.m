@@ -27,7 +27,7 @@
 
 
 - (IBAction)shareAction:(id)sender {
-    KXShareView *shareView = [KXShareView newFromNibWithHeight:152.0];
+    KXShareView *shareView = [KXShareView newFromNibWithHeight:204.0];
     __weak __typeof__(shareView)weakShareView = shareView;
     shareView.dismissBlock = ^(){
         [weakShareView dismissPresentingPopup];
@@ -75,14 +75,15 @@
         [OpenShare shareToWeibo:msg Success:^(OSMessage *message) {
             NSLog(@"分享到sina微博成功:\%@",message);
         } Fail:^(OSMessage *message, NSError *error) {
-            NSLog(@"分享到sina微博失败:\%@\n%@",message,error);
+            NSLog(@"分享到sina微博失败:\%@\n%@",message, error);
         }];
     }];
     weiboActivity.tag = 2;
     weiboActivity.title = @"微博";
     weiboActivity.thumbImage = [UIImage imageNamed:@"qq"];
     
-    [shareView loadShareObjects:@[qqActivity, weixinActivity, weiboActivity]];
+//    [shareView loadShareObjects:@[qqActivity, weixinActivity, weiboActivity]];
+    [shareView loadShareObjects:@[qqActivity, weixinActivity, qqActivity, weixinActivity, qqActivity, weixinActivity]];
     
     // Show in popup
     KLCPopupLayout layout = KLCPopupLayoutMake(KLCPopupHorizontalLayoutLeft, KLCPopupVerticalLayoutBottom);

@@ -16,7 +16,7 @@ typedef void (^KXShareActivityActionHandler)(int tag);
 
 @property (nonatomic, assign) int tag;
 @property (nonatomic, copy) NSString *title;
-@property (nonatomic, strong) UIImage *thumbImage;
+@property (nonatomic, copy) UIImage *thumbImage;
 @property (nonatomic, copy) NSDictionary *userInfo;
 @property (nonatomic, copy) KXShareActivityActionHandler actionHandler;
 

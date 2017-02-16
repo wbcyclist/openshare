@@ -11,8 +11,15 @@
 @interface KXShareViewFlowLayout : UICollectionViewFlowLayout
 
 @property (nonatomic, assign) CGSize itemSize;
-@property (nonatomic, assign) CGFloat itemGapH;
-@property (nonatomic, assign) CGFloat itemGapV;
-@property (nonatomic, assign) CGFloat topOffset;
+/// item间水平最小距离
+@property (nonatomic, assign) CGFloat itemMinGapH;
+/// item间垂直最小距离
+@property (nonatomic, assign) CGFloat itemMinGapV;
+
+/// 一行最多显示多少个item, 0为不做限制
+@property (nonatomic, assign) u_int maxRowItemCount;
+/// 一列最多显示多少item, 0为不做限制
+@property (nonatomic, assign) u_int maxColumnItemCount;
+
 
 @end

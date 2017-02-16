@@ -10,6 +10,9 @@
 
 @interface KXShareViewCell : UICollectionViewCell
 
+@property (nonatomic, copy) UIFont *itemFont;
+@property (nonatomic, copy) UIColor *itemFontColor;
+
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, strong) UIImage *thumbImage;
 

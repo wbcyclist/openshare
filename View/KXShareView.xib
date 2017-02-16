@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -11,17 +15,33 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="243"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UNW-nD-8yk" userLabel="TopView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="分享" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SvM-ET-j8t">
+                            <rect key="frame" x="146" y="11.5" width="29" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="SvM-ET-j8t" firstAttribute="centerX" secondItem="UNW-nD-8yk" secondAttribute="centerX" id="Ezr-pX-iWi"/>
+                        <constraint firstItem="SvM-ET-j8t" firstAttribute="centerY" secondItem="UNW-nD-8yk" secondAttribute="centerY" id="jUS-fH-HPi"/>
+                        <constraint firstAttribute="height" constant="40" id="vch-l6-ppH"/>
+                    </constraints>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rqb-xW-qUd" userLabel="ContentView">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="193"/>
+                    <rect key="frame" x="0.0" y="40" width="320" height="163"/>
                     <subviews>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="3QA-xS-Aen">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="193"/>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="163"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="qui-Kn-aQV" customClass="KXShareViewFlowLayout">
-                                <size key="itemSize" width="55" height="84"/>
+                                <size key="itemSize" width="50" height="78"/>
                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                <inset key="sectionInset" minX="0.0" minY="5" maxX="0.0" maxY="5"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </collectionViewFlowLayout>
                         </collectionView>
                     </subviews>
@@ -33,14 +53,14 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Yb-sL-400" userLabel="BottomView">
-                    <rect key="frame" x="0.0" y="193" width="320" height="50"/>
+                    <rect key="frame" x="0.0" y="203" width="320" height="40"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OmW-gb-Xvm">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <state key="normal" title="取消">
-                                <color key="titleColor" red="0.50588235294117645" green="0.50588235294117645" blue="0.50588235294117645" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleColor" red="0.50588235294117645" green="0.50588235294117645" blue="0.50588235294117645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                             <connections>
                                 <action selector="onCancelAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="GgT-CS-cJu"/>
@@ -48,7 +68,7 @@
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ep5-Mb-w3P" userLabel="Separation">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="0.5"/>
-                            <color key="backgroundColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="0.5" id="HnA-0J-q5G"/>
                             </constraints>
@@ -56,7 +76,7 @@
                     </subviews>
                     <constraints>
                         <constraint firstItem="Ep5-Mb-w3P" firstAttribute="leading" secondItem="3Yb-sL-400" secondAttribute="leading" id="2H1-5s-He3"/>
-                        <constraint firstAttribute="height" constant="50" id="38p-cJ-t9O"/>
+                        <constraint firstAttribute="height" constant="40" id="38p-cJ-t9O"/>
                         <constraint firstAttribute="trailing" secondItem="OmW-gb-Xvm" secondAttribute="trailing" id="8iz-i0-7C0"/>
                         <constraint firstAttribute="trailing" secondItem="Ep5-Mb-w3P" secondAttribute="trailing" id="EDx-CQ-ATU"/>
                         <constraint firstItem="Ep5-Mb-w3P" firstAttribute="top" secondItem="3Yb-sL-400" secondAttribute="top" id="JIu-CR-Pxv"/>
@@ -66,14 +86,17 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="3Yb-sL-400" secondAttribute="trailing" id="0yg-Sr-3l1"/>
                 <constraint firstItem="3Yb-sL-400" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="1ji-Ws-Twb"/>
                 <constraint firstAttribute="bottom" secondItem="3Yb-sL-400" secondAttribute="bottom" id="43W-Kf-ygL"/>
-                <constraint firstItem="rqb-xW-qUd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="4Nm-bd-0KZ"/>
                 <constraint firstAttribute="trailing" secondItem="rqb-xW-qUd" secondAttribute="trailing" id="9PI-Vh-Pnd"/>
+                <constraint firstAttribute="trailing" secondItem="UNW-nD-8yk" secondAttribute="trailing" id="DUn-Og-fiC"/>
+                <constraint firstItem="UNW-nD-8yk" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="KI8-Cl-OgL"/>
                 <constraint firstItem="3Yb-sL-400" firstAttribute="top" secondItem="rqb-xW-qUd" secondAttribute="bottom" id="Ox5-y3-6ZM"/>
+                <constraint firstItem="UNW-nD-8yk" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Qpp-A7-JOO"/>
+                <constraint firstItem="rqb-xW-qUd" firstAttribute="top" secondItem="UNW-nD-8yk" secondAttribute="bottom" id="csE-sm-a12"/>
                 <constraint firstItem="rqb-xW-qUd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="uxu-oj-QT7"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
